@@ -1,0 +1,11 @@
+[Unit]
+Description=MQTT SERVICE
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3.4 /home/pi/mqttclient.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
